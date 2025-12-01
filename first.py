@@ -824,51 +824,133 @@
 # Queston No 5 :
 
 
-students = {}
+# students = {}
 
-while True:
-    print("\nMenu:")
-    print("A - Add a student")
-    print("B - Update marks")
-    print("C - Search for a student")
-    print("D - Display all students and marks")
-    print("E - Exit program")
+# while True:
+#     print("\nMenu:")
+#     print("A - Add a student")
+#     print("B - Update marks")
+#     print("C - Search for a student")
+#     print("D - Display all students and marks")
+#     print("E - Exit program")
     
-    choice = input("Enter your choice (A/B/C/D/E): ").upper()
+#     choice = input("Enter your choice (A/B/C/D/E): ").upper()
 
-    if choice == "A":
-        name = input("Enter your name: ")
-        marks = int(input("Enter your marks: "))
-        students[name] = marks
-        print(f"{name} added successfully.")
+#     if choice == "A":
+#         name = input("Enter your name: ")
+#         marks = int(input("Enter your marks: "))
+#         students[name] = marks
+#         print(f"{name} added successfully.")
 
-    elif choice == "B":
-        name = input("Enter your name: ")
-        if name in students:
-            marks = int(input("Enter new marks: "))
-            students[name] = marks
-            print(f"Marks updated for {name}")
-        else:
-            print("Student not found.")
+#     elif choice == "B":
+#         name = input("Enter your name: ")
+#         if name in students:
+#             marks = int(input("Enter new marks: "))
+#             students[name] = marks
+#             print(f"Marks updated for {name}")
+#         else:
+#             print("Student not found.")
 
-    elif choice == "C":
-        name = input("Enter a student name to search: ")
-        if name in students:
-            print(f"{name} is available with marks: {students[name]}")
-        else:
-            print("Student is not available.")
+#     elif choice == "C":
+#         name = input("Enter a student name to search: ")
+#         if name in students:
+#             print(f"{name} is available with marks: {students[name]}")
+#         else:
+#             print("Student is not available.")
 
-    elif choice == "D":
-        if len(students) == 0:
-            print("No Students Available")
-        else:
-            print("\nStudents List:")
-            for name, marks in students.items():
-                print(f"Student Name: {name}  |  Student Marks: {marks}")
+#     elif choice == "D":
+#         if len(students) == 0:
+#             print("No Students Available")
+#         else:
+#             print("\nStudents List:")
+#             for name, marks in students.items():
+#                 print(f"Student Name: {name}  |  Student Marks: {marks}")
 
-    elif choice == "E":
-        print("Exiting program...")
-        break
+#     elif choice == "E":
+#         print("Exiting program...")
+#         break
 
-    else:
-        print("Invalid choice. Please choose A, B, C, D, or E.")
+#     else:
+#         print("Invalid choice. Please choose A, B, C, D, or E.")
+
+
+
+# Question NO 6 :
+# words = ["apple", "banana", "kiwi", "cherry", "mango"]
+
+# fruits = {}
+
+# for w in words:
+#     length = len(w)
+#     fruits[w] = length   # <-- This is what you were missing
+
+# print(fruits)
+
+
+
+
+
+# Question NO 7 :
+
+
+# phrase = input("Enter a phrase please :");
+
+
+# dashes = phrase.count(" ");
+
+# print(f"So the number of dashes in the {phrase} is {dashes}");
+
+
+# Question NO 8
+
+
+
+# list1 = [1,3,4,5,6]
+# list2 = [6,7,8,9,10]
+
+# s1 = set(list1)
+# s2 = set(list2)
+
+# ans = s1.isdisjoint(s2)
+# print(ans)
+
+
+
+# Question No 9 :
+
+
+# list = [1, 2, 3, 2, 4, 5, 1]
+
+
+# seen = set();
+# duplicate = set();
+
+# for number in list:
+#     if number in seen:
+#         duplicate.add(number)
+#     else:
+#         seen.add(number)
+
+
+# print(f"Elements that appear more than once: { duplicate} "),
+
+
+
+
+# Quetion 10 :
+
+
+# word = input("Enter a word :");
+
+# unique_words = set(word);
+
+# length = len(unique_words);
+
+# print(f"The unique words are : {unique_words} and the length of unique words are :{length}")
+    
+
+
+
+# # Chapter 3 Question are done .All the 10 Question.
+
+
