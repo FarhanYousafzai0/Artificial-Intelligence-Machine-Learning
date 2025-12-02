@@ -389,3 +389,274 @@ Encapsulations And Data hiding ,
 # c2.make_sound()
 
 
+
+
+
+# class PakistanArmy():
+#     def attact(self):
+#         print("Ground Attact");
+
+
+
+# class PakistanNavy():
+#     def attact(self):
+#         print("Sea Attact");
+
+# class PakistanAirforce():
+#     def attact(self):
+#         print("Air Attact");
+
+
+# forces = [PakistanArmy(),PakistanNavy(),PakistanAirforce()]
+
+# for i in forces:
+#     i.attact();
+
+
+
+
+
+
+# Assignment Questions :
+
+# Problems Question 1 :
+
+
+
+# class BankAccount:
+#     def __init__(self, account_number, owner_name, account_balance):
+#         self.account_number = account_number
+#         self.owner_name = owner_name
+#         self.account_balance = account_balance
+
+#     def deposit(self, add_money):
+#         self.account_balance += add_money
+#         print(f"Deposit successful! New balance: {self.account_balance}")
+
+#     def withdraw(self, amount):
+#         if amount > self.account_balance:
+#             print("Insufficient balance.")
+#         else:
+#             self.account_balance -= amount
+#             print(f"Withdrawn: {amount}. Remaining balance: {self.account_balance}")
+
+#     def check_balance(self):
+#         print(f"Current balance: {self.account_balance}")
+
+
+# # Creating object (correct)
+# b1 = BankAccount(879065784, "United Bank Limited", 7000000)
+
+# # Testing
+# b1.deposit(7000000);
+
+
+
+
+# Question No 2 :
+
+
+# class Book:
+#     def __init__(self, title, author, list_of_reviews=None):
+#         self.title = title
+#         self.author = author
+#         self.list_of_reviews = list_of_reviews if list_of_reviews is not None else []
+
+#     def add_review(self, review):
+        
+#         self.list_of_reviews.append(review)
+#         print(f"Review added: {review}")
+
+#     def count_reviews(self):
+#         print(f"Total reviews: {len(self.list_of_reviews)}")
+
+#     def display_reviews(self):
+#         if len(self.list_of_reviews) == 0:
+#             print("No reviews found.")
+#         else:
+#             print("All Reviews:")
+#             for r in self.list_of_reviews:
+#                 print("-", r)
+
+
+# # Creating object
+# b1 = Book("Guardians of the Galaxy", "Adam Hills", [])
+
+# # Add review
+# b1.add_review("Great book with powerful concepts!")
+# b1.add_review("A bit slow in the middle but worth reading.")
+
+# # Display reviews
+# b1.display_reviews()
+
+# # Count reviews
+# b1.count_reviews()
+
+
+
+
+# Question NO 3 :
+
+
+
+
+# class Student:
+#     def __init__(self,name,roll_no,marks):
+#         self.__name = name
+#         self.__roll_no = roll_no
+#         self.__marks = marks
+    
+
+#     def get_info(self,name):
+#         if name == "":
+#             print("Name cannot be empty")
+#         else:
+#             self.__name = name    
+
+
+#     def New_marks(self,marks):
+#         if marks >= 0:
+#             self.__marks = marks
+#         else:
+#             print("Marks cannot be nagetive.")             
+
+
+#     def change_roll(self,roll_no):
+#           if 1 <= roll_no <= 100:
+#                self._roll_no = roll_no
+#           else:
+#              print("Invalid roll number")
+    
+
+
+    
+
+
+
+
+# Question No 4 :
+
+
+# import math
+
+# # Base class
+# class Shape:
+#     def area(self):
+#         pass
+
+# # Circle subclass
+# class Circle(Shape):
+#     def __init__(self, radius):
+#         self.radius = radius
+    
+#     def area(self):
+#         return math.pi * self.radius ** 2
+
+# # Rectangle subclass
+# class Rectangle(Shape):
+#     def __init__(self, length, width):
+#         self.length = length
+#         self.width = width
+    
+#     def area(self):
+#         return self.length * self.width
+
+# # Triangle subclass
+# class Triangle(Shape):
+#     def __init__(self, base, height):
+#         self.base = base
+#         self.height = height
+    
+#     def area(self):
+#         return 0.5 * self.base * self.height
+
+
+# # Testing the code
+# if __name__ == "__main__":
+#     # Create objects
+#     circle = Circle(5)
+#     rectangle = Rectangle(10, 6)
+#     triangle = Triangle(8, 4)
+    
+#     # Display areas
+#     print(f"Circle Area: {circle.area():.2f}")
+#     print(f"Rectangle Area: {rectangle.area():.2f}")
+#     print(f"Triangle Area: {triangle.area():.2f}")
+    
+#     # Demonstrating polymorphism
+#     print("\n--- Polymorphism Demo ---")
+#     shapes = [circle, rectangle, triangle]
+#     for shape in shapes:
+#         print(f"{shape.__class__.__name__} area: {shape.area():.2f}")
+        
+             
+
+
+
+
+ #Question 5:
+
+# Base class
+class Vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+    
+    def display_info(self):
+        print(f"Brand: {self.brand}, Model: {self.model}")
+
+
+# Car subclass
+class Car(Vehicle):
+    def __init__(self, brand, model, seats):
+        super().__init__(brand, model)  # Call parent constructor
+        self.seats = seats
+    
+    def display_info(self):
+        super().display_info()
+        print(f"Seats: {self.seats}")
+
+
+# Bike subclass
+class Bike(Vehicle):
+    def __init__(self, brand, model, engine_cc):
+        super().__init__(brand, model)  # Call parent constructor
+        self.engine_cc = engine_cc
+    
+    def display_info(self):
+        super().display_info()
+        print(f"Engine CC: {self.engine_cc}")
+
+
+# Testing the code
+if __name__ == "__main__":
+    # Create Car object
+    car = Car("Toyota", "Camry", 5)
+    print("--- Car Details ---")
+    car.display_info()
+    
+    print()
+    
+    # Create Bike object
+    bike = Bike("Honda", "CBR", 1000)
+    print("--- Bike Details ---")
+    bike.display_info()
+    
+    print()
+    
+    # Accessing attributes directly
+    print("--- Direct Access ---")
+    print(f"Car Brand: {car.brand}, Model: {car.model}, Seats: {car.seats}")
+    print(f"Bike Brand: {bike.brand}, Model: {bike.model}, Engine CC: {bike.engine_cc}")
+                    
+      
+    
+  
+
+
+            
+
+
+            
+            
+       
