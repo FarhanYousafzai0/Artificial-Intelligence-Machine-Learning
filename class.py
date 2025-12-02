@@ -303,28 +303,89 @@ Encapsulations And Data hiding ,
 
 # Interitence:
 
+# Question :
 
-class Employe:
-    startTime = "10PM"
-    endTime = "6PM"
+# class Employe:
+#     startTime = "10PM"
+#     endTime = "6PM"
 
-    def change(self, new_time):
-        self.endTime = new_time
-
-
-class Teacher(Employe):
-    def __init__(self, subject):
-        self.subject = subject
+#     def change(self, new_time):
+#         self.endTime = new_time
 
 
-# Creating object
-t1 = Teacher("Mathematics")
+# class Teacher(Employe):
+#     def __init__(self, subject):
+#         self.subject = subject
 
-# Changing end time using inherited method
-t1.change("8PM")
 
-# Printing details
-print(f"The subject is {t1.subject}, the start time is {t1.startTime}, and the end time is {t1.endTime}")
+# # Creating object
+# t1 = Teacher("Mathematics")
 
+# # Changing end time using inherited method
+# t1.change("8PM")
+
+# # Printing details
+# print(f"The subject is {t1.subject}, the start time is {t1.startTime}, and the end time is {t1.endTime}")
+
+
+
+
+# Types of inheritence :
         
+
+
+
+
+# class Employe:
+#     start_time = "5PM"
+#     end_time = "6Pm"
+
+
+# class AdminStaff(Employe):
+#     def __init__(self,role):
+#         self.role = role
+
+
+# class Account(AdminStaff):
+#      def __init__(self,salary, role):
+#          super().__init__(role)    
+#          self.salary = salary    
+
+
+
+# a1 = Account(40000,"Asistant Officer");
+
+
+# print(a1.end_time,a1.start_time,a1.salary,a1.role);
         
+
+
+
+
+
+# from abc import ABC ,abstractmethod
+
+
+
+# class Animal(ABC):
+#     @abstractmethod
+#     def make_sound(self):
+#         pass
+    
+
+# class Lion(Animal):
+#     def make_sound(self):
+#         print("Roar")
+
+# class Cat(Animal):
+#     def make_sound(self):
+#         print("Meow")
+        
+
+# c1 = Lion();
+# c2 = Cat();
+
+# c1.make_sound();
+# c2.make_sound()
+
+
