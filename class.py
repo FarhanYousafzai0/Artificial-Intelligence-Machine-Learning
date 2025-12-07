@@ -784,18 +784,18 @@ but that can be excuted on many objects,classes and functions.
 
 # Same name ,and performing operation on differnt varaibles,and methos.
 
-x = "Hello World";
+# x = "Hello World";
 
 
-print(len(x));
+# print(len(x));
 
 
 
 
-y = ("Apple","Mango","Oranage");
+# y = ("Apple","Mango","Oranage");
 
 
-print(len(y));
+# print(len(y));
 
 
 
@@ -945,7 +945,141 @@ For example, say we have three classes: Car, Boat, and Plane, and they all have 
 
 
 
+# class Student:
+#     def __init__(self,name):
+#         self.name = name
+#         self.__grade = 0
 
 
 
+#     def set_grade(self,grade):
+
+#         if 0 <= grade <= 100:
+#             self.__grade = grade
+#         else:
+#             print("Grade must be between 0 and 100.")
+
+#     def get_grade(self):
+#         return self.__grade
+
+
+
+#     def get_status(self):
+
+#         if self.__grade >= 60:
+#            return "Passed"
+#         else:
+#             print("You are faild.")            
+        
+
+
+
+
+
+# student = Student("Emil")
+# student.set_grade(85)
+# print(student.get_grade())
+# print(student.get_status())
+
+
+
+
+        
+
+
+
+# class Calculator:
+#   def __init__(self):
+#     self.result = 0
+
+#   def __validate(self, num):
+#     if not isinstance(num, (int, float)):
+#       return False
+#     return True
+
+#   def add(self, num):
+#     if self.__validate(num):
+#       self.result += num
+#     else:
+#       print("Invalid number")
+
+# calc = Calculator()
+# calc.add(10)
+# calc.add(5)
+# print(calc._Calculator__validate)        
+
+
+
+
+
+
+"""
+Name Mangling :
+Name mangling is how Python implements private properties and methods.
+
+When you use double underscores __, Python automatically renames it internally by adding _ClassName in front.
+
+For example, __age becomes _Person__age
+
+
+While  you can  acces the private properities with mangled name,but its not recomended becase it defeats the meanning of encupsulation.
+
+
+"""
+
+
+
+
+"Python Inner Classes :"
+
+
+
+
+# class Outer:
+#   def __init__(self):
+#     self.name = "Emil"
+
+#   class Inner:
+#     def __init__(self, outer):
+#       self.outer = outer
+
+#     def display(self):
+#       print(f"Outer class name: {self.outer.name}")
+
+# outer = Outer()
+# inner = outer.Inner(outer)
+# inner.display()
+
+
+
+
+
+class Car:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+    self.engine = self.Engine()
+
+  class Engine:
+    def __init__(self):
+      self.status = "Off"
+
+    def start(self):
+      self.status = "Running"
+      print("Engine started")
+
+    def stop(self):
+      self.status = "Off"
+      print("Engine stopped")
+
+  def drive(self):
+    if self.engine.status == "Running":
+      print(f"Driving the {self.brand} {self.model}")
+    else:
+      print("Start the engine first!")
+
+car = Car("Toyota", "Corolla")
+car.drive()
+car.engine.start()
+car.drive()
         
